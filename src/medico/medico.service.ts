@@ -34,4 +34,14 @@ export class MedicoService {
 
     return this.medicoRepo.save(medico);
   }
-}
+
+
+  async findByEmail(email: string): Promise<Medico | null> {
+    return this.medicoRepo.findOne({ where: { email } });
+  }
+  
+  }
+
+
+
+
